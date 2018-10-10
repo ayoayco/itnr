@@ -2,6 +2,7 @@ input {
     width: calc(100% - 30px - 165px - (165px / 2));
     margin-left: calc((100% - (100% - 30px - 165px - (165px / 2))) / 2);
     height: 50px;
+    font-size: x-large;
     padding: 15px;
     border: 1px black solid;
     border-radius: 5px;
