@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FoursquareApiService } from '../../foursquare-api/foursquare-api.service';
 
 @Component({
   selector: 'app-searchbox',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchboxComponent implements OnInit {
 
-  constructor() { }
+  query: string;
+
+  constructor(private foursquareService: FoursquareApiService) { }
 
   ngOnInit() {
+  }
+
+  submitQuery() {
+    console.log('Submit Query');
+    this.foursquareService.getPlaces(this.query);
   }
 
 }

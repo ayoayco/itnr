@@ -1,2 +1,2 @@
-<input placeholder="Where do you want to go?">
-<app-searchbutton></app-searchbutton>
+  <input placeholder="Where do you want to go?" [(ngModel)]="query">
+  <app-searchbutton (submitQuery)="submitQuery($event)"></app-searchbutton>

@@ -1,11 +1,14 @@
 {
   "name": "itnr",
   "version": "0.0.0",
+  "homepage": "https://ayoayco.com/itnr/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/itnr",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
