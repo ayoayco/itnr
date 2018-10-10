@@ -1,0 +1,9 @@
+div#jumbotron {
+    padding: 50px 0;
+    width: 100%;
+}
+
+div#search-div {
+    margin: 30px auto;
+    width: 70%;
+}
