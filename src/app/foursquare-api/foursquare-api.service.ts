@@ -11,23 +11,24 @@ export class FoursquareApiService {
 
   constructor(private http: HttpClient) { }
 
-  getPlaces(query: string) {
+  getPlaces(lat: number, lng: number, query: string): any {
+    const ll = `${lat},${lng}`;
     const inputs = {
       'client_id': 'WXORBRNJTHQKWYZAHABAUZIQNQXWQV2P4UBQSFXCYO5NVA5D',
       'client_secret': '1QBJ5JXOVI552ZCZ01PVFLEDNZODQD1JZ4OFSV04AGJ0KMJG',
       'v': '20180323',
       'limit': '1',
-      'll': '40.7243,-74.0018',
+      'll': ll,
       'query': query
     };
     const url = this.buildURL('/venues/explore', inputs);
 
     console.log('URL', url);
 
-    this.http.get(url).subscribe(
-      res => {
-        console.log('Get result', res);
-      }
+    return this.http.get(url).subscribe(
+        res => {
+            console.log(res);
+        }
     );
   }
 

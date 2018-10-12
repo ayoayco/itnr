@@ -17,7 +17,7 @@ export class SearchboxComponent implements OnInit {
 
   submitQuery() {
     console.log('Submit Query');
-    this.foursquareService.getPlaces(this.query);
+    this.foursquareService.getPlaces(14.676208,121.043861,this.query);
   }
 
 }
